@@ -10,7 +10,7 @@ Demo REST endpoint that denerates an excel file for download implemented using
 git clone https://github.com/briantanseng/quarkus-excel-demo.git && cd quarkus-excel-demo
 ```
 
-## Build the project
+## Build and run the project
 ```
 mvn compile quarkus:dev
 ```
