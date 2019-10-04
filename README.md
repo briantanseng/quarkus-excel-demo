@@ -1,6 +1,6 @@
 # quarkus-excel-demo
 
-Demo REST endpoint that denerates an excel file for download implemented using
+Demo REST endpoint that generates an excel file for download implemented using
 
 * [Quarkus](https://quarkus.io/)
 * [Apache POI](https://poi.apache.org/)
