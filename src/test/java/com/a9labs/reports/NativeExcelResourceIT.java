@@ -1,4 +1,4 @@
-package com.n8labs.reports;
+package com.a9labs.reports;
 
 import io.quarkus.test.junit.SubstrateTest;
 
