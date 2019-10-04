@@ -12,24 +12,22 @@ import javax.ws.rs.core.Response.ResponseBuilder;
 @Path("/download")
 public class ExcelResource {
 
-	// TODO: Implement dependency injection
-	// https://quarkus.io/guides/cdi-reference
-	ExcelService excelService = new ExcelService();
-	
-	@GET
-	@Produces("application/vnd.ms-excel")
+    // TODO: Implement dependency injection
+    // See: https://quarkus.io/guides/cdi-reference
+    ExcelService excelService = new ExcelService();
+
+    @GET
+    @Produces("application/vnd.ms-excel")
     public Response downloadExcel() {
 
-		final String filename = "SampleExcel.xlsx";
+        final String filename = "SampleExcel.xlsx";
 
-		InputStream is = new ByteArrayInputStream(excelService.toByteArray());
-		 
+        InputStream is = new ByteArrayInputStream(excelService.toByteArray());
+
         ResponseBuilder responseBuilder = Response.ok(is);
-        responseBuilder.header("Content-Disposition", 
-        		String.format("attachment; filename=\"%s\"", filename));
-        
+        responseBuilder.header("Content-Disposition", String.format("attachment; filename=\"%s\"", filename));
+
         return responseBuilder.build();
-	}
-	
+    }
 
 }

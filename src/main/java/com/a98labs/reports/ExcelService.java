@@ -10,20 +10,18 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelService {
 
-	XSSFWorkbook workbook = new XSSFWorkbook();
-	
-	Object[][] sampleContent = {
-            {"LastName", "FirstName", "BusinessPhone", "City", "ZipPostal"},
-            {"Bedecs", "Anna", "(123)555-0100", "Seattle", 98052},
-            {"Gratacos Solsona", "Antonio", "(123)555-0100", "Boston", 98112},
-            {"Axen", "Thomas", "(123)555-0100", "Los Angeles", 98052},
-            {"Lee", "Christina", "(123)555-0100", "New York", 98052},
-            {"O’Donnell", "Martin", "(123)555-0100", "Minneapolis", 98012}
-    };
-	
-	private void generateContent(String sheetName) {
-		XSSFSheet sheet = workbook.createSheet(sheetName);
-		int rowNum = 0;
+    XSSFWorkbook workbook = new XSSFWorkbook();
+
+    Object[][] sampleContent = { { "LastName", "FirstName", "BusinessPhone", "City", "ZipPostal" },
+            { "Bedecs", "Anna", "(123)555-0100", "Seattle", 98052 },
+            { "Gratacos Solsona", "Antonio", "(123)555-0100", "Boston", 98112 },
+            { "Axen", "Thomas", "(123)555-0100", "Los Angeles", 98052 },
+            { "Lee", "Christina", "(123)555-0100", "New York", 98052 },
+            { "O’Donnell", "Martin", "(123)555-0100", "Minneapolis", 98012 } };
+
+    private void generateContent(String sheetName) {
+        XSSFSheet sheet = workbook.createSheet(sheetName);
+        int rowNum = 0;
         System.out.println("Generating Excel content");
 
         for (Object[] content : sampleContent) {
@@ -38,18 +36,18 @@ public class ExcelService {
                 }
             }
         }
-	}
-	
-	public byte[] toByteArray() {
-		ByteArrayOutputStream bos = new ByteArrayOutputStream();
-		try {
-			generateContent("Sheet 1");
-		    workbook.write(bos);
-		    bos.close();
-		    System.out.println("Retrieving Excel as a Byte array");
-		} catch (IOException e) {
-			e.printStackTrace();
-		} 
-		return bos.toByteArray();
-	}
+    }
+
+    public byte[] toByteArray() {
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();
+        try {
+            generateContent("Sheet 1");
+            workbook.write(bos);
+            bos.close();
+            System.out.println("Retrieving Excel as a Byte array");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return bos.toByteArray();
+    }
 }

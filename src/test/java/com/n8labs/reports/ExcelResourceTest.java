@@ -11,11 +11,7 @@ public class ExcelResourceTest {
 
     @Test
     public void testHelloEndpoint() {
-        given()
-          .when().get("/download")
-          .then()
-             .statusCode(200)
-             .body(is("hello"));
+        given().when().get("/download").then().statusCode(200).body(is("hello"));
     }
 
 }
