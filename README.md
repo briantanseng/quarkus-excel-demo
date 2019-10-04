@@ -2,8 +2,9 @@
 
 Demo REST endpoint that denerates an excel file for download implemented using
 
-* Quarkus
-* Apache POI
+* [Quarkus](https://quarkus.io/)
+* [Apache POI](https://poi.apache.org/)
+* [RESTEasy](https://resteasy.github.io/)
 
 ## Clone the project
 ```
