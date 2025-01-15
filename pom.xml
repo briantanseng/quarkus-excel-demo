@@ -12,7 +12,7 @@
     <quarkus.version>0.23.2</quarkus.version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <resteasy.version>4.3.1.Final</resteasy.version>
+    <resteasy.version>4.7.8.Final</resteasy.version>
     <resteasy.scope>compile</resteasy.scope>
   </properties>
   <dependencyManagement>
